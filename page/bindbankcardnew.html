@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">		
+		<title></title>
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/app.css">
+	</head>
+	<body>
+		<header id="header" class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<a class="mui-icon mui-icon-more-filled mui-pull-right"></a>
+			<h1 class="mui-title">银行卡认证</h1>
+		</header>
+		<div class="mui-content">
+			<div id="wrongDiv">
+				<p class="errortips2" id="wrongTip"></p>
+			</div>			
+			<div class="mui-content-padded">
+				仅支持本人同名储蓄卡
+			</div>
+			<form class="mui-input-group">
+				<div class="mui-input-row">
+					<label>持卡人</label>
+					<input readonly="readonly" name="custName" id="custName" onblur="checkCustName();" type="text" class="mui-input-clear mui-input" placeholder="请输入真实姓名" />
+				</div>
+				<div class="mui-input-row" style="display:none">
+					<label>身份证号</label>
+					<input readonly="readonly" name="custIdNo" id="custIdNo" onblur="checkCustIdNo();" type="text" class="mui-input-clear mui-input" placeholder="请输入身份证" />
+				</div>
+				<div class="mui-input-row">
+					<label>卡号</label>
+					<input name="cardNo" id="cardNo" onblur="channeCardType();" type="text" class="mui-input-clear mui-input" placeholder="输入银行卡卡号" />
+				</div>
+				<div class="mui-input-row">
+					<label>卡类型</label>
+					<input readonly="readonly" name="cardType" id="cardType" onblur="channeCardType();" type="text" class="mui-input-clear mui-input" placeholder="银行卡类型" />
+				</div>
+				<div class="mui-input-row">
+					<label>银行预留手机号</label>
+					<input name="cardPhone" id="cardPhone" onblur="checkCardPhone();" type="text" class="mui-input-clear mui-input" placeholder="输入手机号" />
+				</div>					
+			</form>
+			<div class="mui-content-padded">
+				<button id="nextgo"  onclick="nextGo();" class="mui-btn mui-btn-block mui-btn-primary">提交</button>
+				<div class="link-area">
+					<a href="../page/login.html">稍后设置</a>
+				</div>				
+			</div>
+		</div>
+		<nav class="mui-bar mui-bar-tab">
+		    <a class="mui-tab-item mui-active">
+		        <span class="mui-icon mui-icon-home"></span>
+		        <span class="mui-tab-label">首页</span>
+		    </a>
+		    <a class="mui-tab-item">
+		        <span class="mui-icon mui-icon-gear"></span>
+		        <span class="mui-tab-label">我的</span>
+		    </a>
+		</nav>		
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js" ></script>
+	<script src="../js/mui.js"></script>
+	<script type="text/javascript" src="../js/get_user_status.js"></script>
+	<script type="text/javascript" src="../js/bindbankcardnew.js"></script>
+		<script type="text/javascript">
+			$(function(){
+
+				$('#cardNo').keyup(function(){
+					if($(this).val().replace(/[^\d\s]/g,"").replace(/\s/g,'').length>21){
+						showErrTip("请输入15-21位银行卡号");
+						$(this).val($(this).val().replace(/[^\d\s]/g,"").replace(/\s/g,'').substr(0,21).replace(/(\d{4})(?=\d)/g,"$1 "));
+					}else{
+						showErrTip("");
+						var value=$(this).val().replace(/[^\d\s]/g,"").replace(/\s/g,'').replace(/(\d{4})(?=\d)/g,"$1 ");
+						$(this).val(value)
+					}
+				});	
+		<script>
+	</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">		
+		<title></title>
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/app.css">
+	</head>
+	<body>
+		<header id="header" class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<a class="mui-icon mui-icon-more-filled mui-pull-right"></a>
+			<h1 class="mui-title">纵横卡充值</h1>
+		</header>
+		<div class="mui-content">
+			<p id="errortips"></p>	
+			<p >请选择金额</p>
+			<p class="chosemz rydispn" onClick="test(100)" id="amt">100元</p>
+			<p class="chosemz rydispn" onClick="test(200)" id="amt">200元</p>
+			<p class="chosemz rydispn" onClick="test(300)" id="amt">300元</p>
+			<p class="chosemz rydispn" onClick="test(400)" id="amt">400元</p>
+			<p class="chosemz rydispn" onClick="test(500)" id="amt">500元</p>
+			<p class="chosemz qitaje" id="amt" >其他金额</p>
+			<div class="payall-cz2 buycard2" style="display: none">
+				<p>充值金额</p>
+				<span>¥</span><input type="text" id="inputAmt" class="zixuanje" onblur="replaceAmt(this)" onkeyup="replaceAmt(this)"/>
+				<p>温馨提示：请输入10-5000元的任意金额，最低充值金额10元</p>
+			</div>
+			<div class="mui-content-padded">
+				<button class="mui-btn mui-btn-block mui-btn-primary" id="goPay" onClick="gotopay()" disabled="disabled">
+			        付  款
+			    </button>
+			</div>
+			<form id="reChargeCardForm" method="post">
+				<input type="hidden" id="tranCode" name="tranCode" /> <input
+					type="hidden" id="version" name="version" /> <input
+					type="hidden" id="charset" name="charset" /> <input
+					type="hidden" id="signType" name="signType" /> <input
+					type="hidden" id="merId" name="merId" /> <input
+					type="hidden" id="virCardNoIn" name="virCardNoIn" /> <input
+					type="hidden" id="merOrderNum" name="merOrderNum" /> <input
+					type="hidden" id="tranAmt" name="tranAmt" /> <input
+					type="hidden" id="currencyType" name="currencyType" /> <input
+					type="hidden" id="returnUrl" name="returnUrl" /> <input
+					type="hidden" id="notifyUrl" name="notifyUrl" /> <input
+					type="hidden" id="tranDateTime" name="tranDateTime" /> <input
+					type="hidden" id="tranIP" name="tranIP" /> <input
+					type="hidden" id="goodsName" name="goodsName" /> <input
+					type="hidden" id="merUserId" name="merUserId" /> <input
+					type="hidden" id="buyerName" name="buyerName" /> <input
+					type="hidden" id="idNumber" name="idNumber" /> <input
+					type="hidden" id="phone" name="phone" /> <input
+					type="hidden" id="signValue" name="signValue" />
+			</form>			
+		</div>
+		<nav class="mui-bar mui-bar-tab">
+		    <a class="mui-tab-item mui-active">
+		        <span class="mui-icon mui-icon-home"></span>
+		        <span class="mui-tab-label">首页</span>
+		    </a>
+		    <a class="mui-tab-item">
+		        <span class="mui-icon mui-icon-gear"></span>
+		        <span class="mui-tab-label">我的</span>
+		    </a>
+		</nav>		
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js" ></script>
+	<script src="../js/mui.js"></script>
+	<script type="text/javascript" src="../js/precard_pay.js"></script>
+	<script>
+			$(".chosemz").click(function(){
+				$(".chosemz").removeClass("activechosej")
+				$(this).addClass("activechosej")
+			})
+			$(".zixuanje").focus(function(){
+				$(".chosemz").removeClass("activechosej")
+				$(".qitaje").addClass("activechosej")
+			})
+
+
+			$(".rydispn").click(function(){
+				$(".payall-cz2").css("display","none")
+			})
+			$(".qitaje").click(function(){
+				$(".payall-cz2").css("display","block");
+				$(".zixuanje").focus()
+			})
+	</script>
+	</body>
+</html>

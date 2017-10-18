@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">		
+		<title></title>
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/app.css">
+	</head>
+	<body>
+		<header id="header" class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<a class="mui-icon mui-icon-more-filled mui-pull-right"></a>
+			<h1 class="mui-title">注册</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-content-padded">
+				<p class="" id="errortips"></p>
+			</div>
+			<form class="mui-input-group">
+				<div class="mui-input-row">
+					<label>手机号</label>
+					<input type="text" id="starMobile" readOnly="true" class="mui-input-clear mui-input" />
+				</div>
+				<div class="mui-input-row">
+					<label>手机验证码</label>
+					<input type="text" name="smsCode" id="smsCode" onblur="checkSMSCode();" class="mui-input-clear mui-input" pattern="输入验证码"/>
+					<button class="new-btn" id="sendSMS" onclick="sendSms();">
+			        	获取验证码
+			    	</button>
+				</div>
+				<div class="mui-input-row">
+					<label>输入原支付密码</label>
+					<input type="password" placeholder="输入原支付密码" class="mui-input-clear mui-input " name="oldPwd" id="oldPwd" onblur="checkOldPwd();" />
+				</div>
+				<div class="mui-input-row">
+					<label>设置新支付密码</label>
+					<input type="password" placeholder="输入新支付密码" class="mui-input-clear mui-input " name="pwd" id="pwd" onblur="checkPwd();" />
+				</div>
+				<div class="mui-input-row">
+					<label>确认新支付密码</label>
+					<input type="password" placeholder="输入新支付密码" class="mui-input-clear mui-input " ame="pwdConfirm" id="pwdConfirm" onblur="checkPwdConfirm();" />
+				</div>					
+			</form>
+			<div class="mui-content-padded">
+				密码由8-20位数字字母组合，支持符号~!@#^*_-[],{}:?
+			</div>
+			<div class="mui-content-padded">
+				<button class="mui-btn mui-btn-block mui-btn-primary" id="updateSetPayPwd" onclick="updatePwd();">
+			        	提  交
+			    </button>
+			</div>
+		</div>
+		<nav class="mui-bar mui-bar-tab">
+		    <a class="mui-tab-item mui-active">
+		        <span class="mui-icon mui-icon-home"></span>
+		        <span class="mui-tab-label">首页</span>
+		    </a>
+		    <a class="mui-tab-item">
+		        <span class="mui-icon mui-icon-gear"></span>
+		        <span class="mui-tab-label">我的</span>
+		    </a>
+		</nav>	
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js" ></script>
+	<script src="../js/mui.js"></script>
+	<script type="text/javascript" src="../js/get_user_status.js"></script>
+	<script type="text/javascript" src="../js/modify_pay_pwd.js"></script>	
+	</body>
+</html>

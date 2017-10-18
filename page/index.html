@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">		
+		<title></title>
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/app.css">
+	</head>
+	<body>
+		<header id="header" class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<a class="mui-icon mui-icon-more-filled mui-pull-right"></a>
+			<h1 class="mui-title">纵横钱包</h1>
+		</header>
+		<div class="mui-content">
+			<br/><br/>
+			<img src="../images/indeximg1.png" class="indeximg1" width="100%"/><br/><br/>
+			<img src="../images/indeximg2.png" class="indeximg2"width="100%" />		
+		</div>
+		<nav class="mui-bar mui-bar-tab">
+		    <a class="mui-tab-item mui-active">
+		        <span class="mui-icon mui-icon-home"></span>
+		        <span class="mui-tab-label">首页</span>
+		    </a>
+		    <a class="mui-tab-item" id="myPage">
+		        <span class="mui-icon mui-icon-gear"></span>
+		        <span class="mui-tab-label">我的</span>
+		    </a>
+		</nav>
+		<div id="pwdDialog" class="dialogStyle">
+			<input type="password" id="payPwd"/>
+			<div id="dialogtips"></div>
+			<button class="safeexit">提交验证</button>
+		</div>
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js" ></script>
+	<script src="../js/mui.js"></script>
+	<script type="text/javascript" src="../js/get_user_status.js"></script>
+	<script type="text/javascript" src="../js/common_precard.js" ></script>	
+	<script type="text/javascript" src="../js/index.js" ></script>
+	<script>
+		mui('body').on('tap','a',function(){document.location.href=this.href;});
+		document.getElementById('myPage').addEventListener('tap',function(){
+			mui.openWindow({
+				url:"wallet.html"
+			})
+		})
+	</script>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">		
+		<title></title>
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/app.css">
+	</head>
+	<body>
+		<header id="header" class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<a class="mui-icon mui-icon-more-filled mui-pull-right"></a>
+			<h1 class="mui-title">绑定纵横卡</h1>
+		</header>
+		<div class="mui-content">
+		<p  id="wrongTip"></p>
+		<form class="mui-input-group">
+			<div class="mui-input-row">
+				<label>纵横卡卡号</label>
+				<input id='cardNo' type="text" class="mui-input-clear mui-input" placeholder="请输入卡号">
+			</div>
+			<div class="mui-input-row">
+				<label>密码</label>
+				<input id='pwd' type="password" class="mui-input-clear mui-input" placeholder="输入密码">
+			</div>			
+		</form>
+			<div class="mui-content-padded">
+				<button id="next" onclick="nextGo();" class="mui-btn mui-btn-block mui-btn-primary">提交</button>
+			</div>				
+		</div>
+		<nav class="mui-bar mui-bar-tab">
+		    <a class="mui-tab-item mui-active">
+		        <span class="mui-icon mui-icon-home"></span>
+		        <span class="mui-tab-label">首页</span>
+		    </a>
+		    <a class="mui-tab-item">
+		        <span class="mui-icon mui-icon-gear"></span>
+		        <span class="mui-tab-label">我的</span>
+		    </a>
+		</nav>		
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js" ></script>
+	<script src="../js/mui.js"></script>
+	<script type="text/javascript" src="../js/get_user_status.js" ></script>
+	<script type="text/javascript" src="../js/common_precard.js" ></script>
+	<script type="text/javascript" src="../js/precard_bind.js" ></script>	
+	</body>
+</html>

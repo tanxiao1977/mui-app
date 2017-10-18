@@ -1,0 +1,238 @@
+{
+	"index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"page/login.html"
+		],
+		"refer": [
+			"page/login.html"
+		]
+	},
+	"page/login.html": {
+		"resources": [
+			"css/app.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/mui.min.js",
+			"images/loading.gif",
+			"js/login.js",
+			"js/mui.js",
+			"index.html",
+			"page/register_1.html",
+			"js/jquery-1.8.3.min.js",
+			"page/index.html"
+		],
+		"refer": [
+			"index.html",
+			"page/register_1.html",
+			"page/index.html",
+			"page/test.html"
+		]
+	},
+	"page/register_1.html": {
+		"resources": [
+			"js/jquery-1.8.3.min.js",
+			"js/register_1.js",
+			"page/register_1.html",
+			"css/mui.min.css",
+			"page/login.html",
+			"page/register_2.html",
+			"css/app.css",
+			"fonts/mui.ttf",
+			"js/mui.js"
+		],
+		"refer": [
+			"page/register_1.html",
+			"page/login.html",
+			"page/register_2.html"
+		]
+	},
+	"page/register_2.html": {
+		"resources": [
+			"js/register_2.js",
+			"css/mui.min.css",
+			"page/set_pay_pwd.html"
+		],
+		"refer": [
+			"page/set_pay_pwd.html"
+		]
+	},
+	"page/set_pay_pwd.html": {
+		"resources": [
+			"css/mui.min.css",
+			"js/set_pay_pwd.js",
+			"page/login.html"
+		],
+		"refer": [
+			"page/login.html"
+		]
+	},
+	"page/index.html": {
+		"resources": [
+			"js/jquery-1.8.3.min.js",
+			"images/indeximg2.png",
+			"js/common_precard.js",
+			"js/index.js",
+			"page/realname_auth.html",
+			"images/indeximg1.png",
+			"css/mui.min.css",
+			"js/get_user_status.js",
+			"page/wallet_unionprecard.html",
+			"page/precard_bind.html",
+			"page/wallet.html",
+			"page/reset_password.html",
+			"page/login.html"
+		],
+		"refer": [
+			"page/realname_auth.html",
+			"page/wallet_unionprecard.html",
+			"page/precard_bind.html",
+			"page/wallet.html",
+			"page/reset_password.html",
+			"page/login.html"
+		]
+	},
+	"page/realname_auth.html": {
+		"resources": [
+			"js/get_user_status.js",
+			"css/mui.min.css",
+			"js/realname_auth.js",
+			"page/index.html"
+		],
+		"refer": [
+			"page/index.html"
+		]
+	},
+	"page/wallet_unionprecard.html": {
+		"resources": [
+			"images/addcard2.png",
+			"css/mui.min.css",
+			"js/wallet_unionprecard.js",
+			"page/precard_bind.html",
+			"page/index.html",
+			"page/trades.html",
+			"page/precard_pay.html"
+		],
+		"refer": [
+			"page/precard_bind.html",
+			"page/index.html",
+			"page/trades.html",
+			"page/precard_pay.html"
+		]
+	},
+	"page/precard_bind.html": {
+		"resources": [
+			"js/precard_bind.js",
+			"css/mui.min.css",
+			"page/index.html",
+			"page/wallet_unionprecard.html",
+			"page/precard.html"
+		],
+		"refer": [
+			"page/index.html",
+			"page/wallet_unionprecard.html",
+			"page/precard.html"
+		]
+	},
+	"page/wallet.html": {
+		"resources": [
+			"js/merberinfo.js",
+			"page/reset_password.html",
+			"page/operate.html",
+			"js/jquery-1.8.3.min.js",
+			"js/get_user_status.js",
+			"page/modify_pay_pwd.html",
+			"css/mui.min.css",
+			"js/mui.js",
+			"page/merchantList.html",
+			"page/index.html",
+			"page/login.html"
+		],
+		"refer": [
+			"page/reset_password.html",
+			"page/operate.html",
+			"page/modify_pay_pwd.html",
+			"page/merchantList.html",
+			"page/index.html",
+			"page/login.html"
+		]
+	},
+	"page/reset_password.html": {
+		"resources": [
+			"css/mui.min.css",
+			"js/reset_password.js",
+			"page/wallet.html",
+			"page/login.html"
+		],
+		"refer": [
+			"page/wallet.html",
+			"page/login.html"
+		]
+	},
+	"page/operate.html": {
+		"resources": [
+			"images/shiyong.png",
+			"css/mui.min.css",
+			"page/wallet.html"
+		],
+		"refer": [
+			"page/wallet.html"
+		]
+	},
+	"page/modify_pay_pwd.html": {
+		"resources": [
+			"js/modify_pay_pwd.js",
+			"css/mui.min.css",
+			"page/wallet.html"
+		],
+		"refer": [
+			"page/wallet.html"
+		]
+	},
+	"page/merchantList.html": {
+		"resources": [
+			"images/shlist.png",
+			"page/wallet.html"
+		],
+		"refer": [
+			"page/wallet.html"
+		]
+	},
+	"page/trades.html": {
+		"resources": [
+			"js/get_user_status.js",
+			"css/mui.min.css",
+			"js/trades.js",
+			"page/wallet_unionprecard.html"
+		],
+		"refer": [
+			"page/wallet_unionprecard.html"
+		]
+	},
+	"page/precard.html": {
+		"resources": [
+			"js/precard.js",
+			"images/addcard.png",
+			"css/mui.min.css",
+			"page/precard_bind.html"
+		],
+		"refer": [
+			"page/precard_bind.html"
+		]
+	},
+	"page/precard_pay.html": {
+		"resources": [
+			"js/precard_pay.js",
+			"css/mui.min.css"
+		]
+	},
+	"page/test.html": {
+		"resources": [
+			"js/jquery-1.8.3.min.js",
+			"css/mui.min.css",
+			"js/register_1.js",
+			"js/mui.js"
+		]
+	}
+}

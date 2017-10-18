@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">		
+		<title></title>
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/app.css">
+	</head>
+	<body>
+		<header id="header" class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<a class="mui-icon mui-pull-right" href="../page/trades.html">交易记录</a>
+			<h1 class="mui-title">我的网络账户</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-row mui-text-center">
+				<div class="mui-col-sm-6 mui-col-xs-6">
+					<li class="mui-table-view-cell">网络账户总金额<br/><span id="sumBalance"></span></li>
+				</div>
+				<div class="mui-col-sm-6 mui-col-xs-6">
+					<li class="mui-table-view-cell">剩余额度(元)<span id="annualQuotaAmt">  ...</span><br/>年度可消费额度为5000元</li>
+				</div>				
+			</div>
+			<p class="errortips3" id="wrongTip"></p>
+			<div style="display: none;">
+				<input type="text" id="preCardId_new">
+				<input type="text" id="identifyStatus_new">
+			</div>
+			<div  id="showList"></div>
+			<img src="../images/addcard2.png" class="addcardimg2" style="width:100%;"/>
+			
+		</div>
+		<div id="pwdDialog" class="dialogStyle">
+			<input type="password" id="payPwd"/>
+			<div id="dialogtips"></div>
+			<button class="safeexit">提交验证</button>
+		</div>
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js" ></script>
+	<script src="../js/mui.js"></script>
+	<script type="text/javascript" src="../js/get_user_status" ></script>
+	<script type="text/javascript" src="../js/common_precard.js" ></script>
+	<script type="text/javascript" src="../js/wallet_unionprecard.js" ></script>	
+	</body>
+</html>

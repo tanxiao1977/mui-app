@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">		
+		<title></title>
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/app.css">
+	</head>
+	<body>
+		<header id="header" class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<a class="mui-icon mui-icon-more-filled mui-pull-right"></a>
+			<h1 class="mui-title">实名认证</h1>
+		</header>
+		<div class="mui-content">
+		<form id='login-form' class="mui-input-group">
+			<div id="wrongDiv">
+				<p class="errortips2" id="wrongTip"></p>
+			</div>			
+			<div class="mui-input-row">
+				<label>姓 名</label>
+				<input name="custName" id="custName" onblur="checkCustName();" placeholder="输入真实姓名" type="text" class="mui-input-clear mui-input" />
+			</div>
+			<div class="mui-input-row">
+				<label>证件号码</label>
+				<input name="custIdNo" id="custIdNo" placeholder="输入证件号码" type="text" class="mui-input-clear mui-input" />
+			</div>			
+		</form>
+		</div>
+		<div class="mui-content-padded">
+			<button id="nextGo" onclick="custNameAuth();" class="mui-btn mui-btn-block mui-btn-primary">提 交</button>
+			<div class="link-area"><a href="../index.html">稍后设置</a>
+			</div>
+		</div>			
+		<nav class="mui-bar mui-bar-tab">
+		    <a class="mui-tab-item">
+		        <span class="mui-icon mui-icon-home"></span>
+		        <span class="mui-tab-label">首页</span>
+		    </a>
+		    <a class="mui-tab-item">
+		        <span class="mui-icon mui-icon-gear"></span>
+		        <span class="mui-tab-label">我的</span>
+		    </a>
+		</nav>		
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js" ></script>
+	<script src="../js/mui.js"></script>
+	<script type="text/javascript" src="../js/get_user_status.js"></script>
+	<script type="text/javascript" src="../js/realname_auth.js"></script>	
+	</body>
+</html>

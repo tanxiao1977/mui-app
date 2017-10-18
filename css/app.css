@@ -1,0 +1,56 @@
+.mui-bar{
+	background:#373951;
+}
+.mui-title{
+	color:#ffffff;
+}
+a{
+	color:#ffffff;
+}
+.mui-bar-tab .mui-tab-item.mui-active{
+	color:#ffffff;
+}
+.mui-input-group:first-child {
+	margin-top: 20px;
+}
+.link-area {
+	display: block;
+	margin-top: 25px;
+	text-align: center;
+}
+.link-area a{
+		color:#586b95;;
+}
+.mui-btn-primary, input[type=submit]{
+	border:1px solid #ed414d;
+	background-color:#ed414d;	
+}
+.mui-btn, button, input[type=button], input[type=reset], input[type=submit] {
+	border-radius:40px;
+}
+.authCodeImg{
+	position: absolute;
+	right:3px;
+	top:5px;
+	height:30px;
+}
+.new-btn{
+	position: absolute;
+	right:3px;
+	top:5px;
+	height:30px	
+}
+.color-1{
+	color:#586b95;
+}
+.dialogStyle{
+	display:none;
+	position:fixed;
+	top:50%;
+	left:20%;
+	width:270px;
+	overflow:hidden;
+	border-radius: 13px;
+	background:#ffffff;
+	z-index:10000;
+}

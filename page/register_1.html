@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">		
+		<title></title>
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/app.css">
+	</head>
+	<body>
+		<header id="header" class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<a class="mui-icon mui-icon-more-filled mui-pull-right"></a>
+			<h1 class="mui-title">注册</h1>
+		</header>
+		<div class="mui-content">
+			<div id="wrongDiv">
+				<p class="errortips2" id="wrongTip"></p>
+			</div>
+			<form id='' class="mui-input-group">
+			<div class="mui-input-row">
+				<label>+ 8 6</label>
+				<input name="mobile" id="mobile" onblur="checkMobile();" type="number" class="mui-input-clear mui-input" placeholder="请输入手机号">
+			</div>
+			<div class="mui-input-row">
+				<label>手机验证码</label>
+				<input id='smsCode' type="text" class="mui-input-clear mui-input" placeholder="请输入验证码">
+				<button class="new-btn" id="sendSMS" onclick="sendSms()">
+			        获取验证码
+			    </button>
+			</div>			
+			</form>
+			<div class="mui-content-padded">
+				同意<a class="color-1" href="">&lt;&lt;纵横钱包服务协议&gt;&gt;</a>
+			</div>
+			<div class="mui-content-padded">
+				<button id="regBtn" onClick="registerFirst();" class="mui-btn mui-btn-block mui-btn-primary">注册</button>
+				<div class="link-area"><a href="login.html">已有帐号去登录1</a>
+				</div>
+			</div>
+		</div>
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js" ></script>
+	<script src="../js/mui.js"></script>
+	<script src="../js/register_1.js"></script>
+	<script>
+		mui.plusReady(function () {
+		var self = plus.webview.currentWebview();
+		var name = self.name
+		alert(name)
+		})
+
+
+
+	</script>
+	</body>
+</html>
